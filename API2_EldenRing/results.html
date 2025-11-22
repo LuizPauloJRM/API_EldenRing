@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Resultados da Busca - Elden Ring</title>
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/results.css">
+</head>
+
+<body>
+
+    <nav class="nav-container">
+        <h1 class="logo">Elden Ring DB</h1>
+
+        <ul class="nav-links">
+            <li><a href="home.html">Início</a></li>
+            <li><a href="favorites.html">Favoritos</a></li>
+            <li><a href="classes.html">Classes</a></li>
+            <li><a href="builds.html">Builds</a></li>
+        </ul>
+    </nav>
+
+    <main class="results-wrapper">
+
+        <h2 class="results-title">Resultados da pesquisa:</h2>
+        <p id="search-term" class="search-term"></p>
+
+        <div id="results-container" class="results-container"></div>
+
+    </main>
+
+    <script src="./js/utils.js" type="module"></script>
+    <script src="./js/api.js" type="module"></script>
+    <script src="./js/results.js" type="module"></script>
+
+</body>
+
+</html>

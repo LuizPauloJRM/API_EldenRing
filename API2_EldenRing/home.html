@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EldenRing Explorer - Home</title>
+
+    <!-- CSS global e CSS específico da Home -->
+    <link rel="stylesheet" href="../css/globals.css">
+    <link rel="stylesheet" href="../css/home.css">
+</head>
+
+<body>
+
+    <!-- =========================================
+         NAVBAR
+    ========================================== -->
+    <header class="navbar">
+        <div class="nav-logo">
+            <a href="home.html">EldenRing Explorer</a>
+        </div>
+
+        <nav class="nav-links">
+            <a href="home.html">Início</a>
+            <a href="categorias.html">Categorias</a>
+            <a href="favorites.html">Favoritos</a>
+            <a href="builds.html">Builds</a>
+        </nav>
+
+        <!-- Campo de busca do topo -->
+        <div class="nav-search">
+            <input type="text" placeholder="Buscar..." id="navSearchInput">
+        </div>
+    </header>
+
+
+    <!-- =========================================
+         CONTEÚDO PRINCIPAL
+    ========================================== -->
+    <main class="container">
+
+        <!-- BARRA DE PESQUISA ESTILO GOOGLE -->
+        <section class="search-section">
+            <h1 class="title">O que deseja explorar?</h1>
+
+            <div class="search-box">
+                <input type="text" id="mainSearchInput" placeholder="Procure por armaduras, locais ou bosses">
+                <button id="mainSearchBtn">Buscar</button>
+            </div>
+        </section>
+
+
+        <!-- =========================================
+            CARROSSEL DE IMAGENS
+        ========================================== -->
+        <section class="carousel-section">
+            <div class="carousel">
+
+                <!-- Botões -->
+                <button class="carousel-btn prev" id="prevImg">&#10094;</button>
+
+                <!-- Área das imagens -->
+                <div class="carousel-images" id="carouselImages">
+                    <!-- JS vai carregar as imagens aqui -->
+                </div>
+
+                <button class="carousel-btn next" id="nextImg">&#10095;</button>
+
+            </div>
+        </section>
+
+
+        <!-- =========================================
+            ATALHOS RÁPIDOS
+        ========================================== -->
+        <section class="quick-links">
+
+            <div class="quick-card" data-type="armors">
+                <img src="https://eldenring.fanapis.com/images/armor.png" alt="">
+                <p>Armaduras</p>
+            </div>
+
+            <div class="quick-card" data-type="bosses">
+                <img src="https://eldenring.fanapis.com/images/boss.png" alt="">
+                <p>Bosses</p>
+            </div>
+
+            <div class="quick-card" data-type="locations">
+                <img src="https://eldenring.fanapis.com/images/location.png" alt="">
+                <p>Locais</p>
+            </div>
+
+            <div class="quick-card" data-type="classes">
+                <img src="https://eldenring.fanapis.com/images/class.png" alt="">
+                <p>Classes</p>
+            </div>
+
+            <div class="quick-card" data-type="creatures">
+                <img src="https://eldenring.fanapis.com/images/creature.png" alt="">
+                <p>Criaturas</p>
+            </div>
+
+            <div class="quick-card" data-type="items">
+                <img src="https://eldenring.fanapis.com/images/item.png" alt="">
+                <p>Itens</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- JS da página -->
+    <script src="../js/home.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/utils.js"></script>
+
+</body>
+
+</html>

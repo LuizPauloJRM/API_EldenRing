@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--Documentação :https://docs.eldenring.fanapis.com/docs-->
+<!--Api : https://eldenring.fanapis.com/api/items?limit=2-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Elden Ring</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Navegação -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Elden Ring</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="home.html">Explorar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="favoritos.html" onclick="goToFavorites()">Favoritos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container">
+            <h1>Explore o Universo</h1>
+            <p>Descubra armas, chefes e itens lendários</p>
+        </div>
+    </div>
+
+    <div class="container pb-5">
+        <!-- Seção de Filtros -->
+        <div class="filter-section">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <label class="form-label">Categoria</label>
+                    <select class="form-select" id="categorySelect" onchange="loadItems()">
+                        <option value="">Selecione uma categoria</option>
+                        <option value="bosses">Chefes</option>
+                        <option value="weapons">Armas</option>
+                        <option value="shields">Escudos</option>
+                        <option value="armors">Armaduras</option>
+                        <option value="items">Itens</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Buscar</label>
+                    <input type="text" class="form-select" id="searchInput" placeholder="Digite para buscar..."
+                        oninput="filterItems()">
+                </div>
+            </div>
+        </div>
+
+        <!-- Spinner de Carregamento -->
+        <div id="loadingSpinner" class="spinner-container" style="display: none;">
+            <div class="spinner-border" role="status" style="width: 3rem; height: 3rem;">
+                <span class="visually-hidden">Carregando...</span>
+            </div>
+        </div>
+
+        <!-- Grade de Itens -->
+        <div id="itemsGrid" class="row g-4">
+            <div class="col-12 empty-state">
+                <h5>Selecione uma categoria para começar</h5>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/explorar.js"></script>
+</body>
+
+</html>
